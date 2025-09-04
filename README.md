@@ -1,6 +1,4 @@
-Normalizes audio to -14 LUFS with FFmpeg loudnorm dual-pass for consistent streaming playback.
-Uses safe defaults with headroom (true peak -1.5 dBTP) and avoids overwriting by auto-suffixing outputs.
-Works via a simple GUI or CLI on Python 3.8+ with FFmpeg in PATH.
+Hit the streaming sweet spot with -14 LUFS. This tool delivers clear, punchy masters that translate consistently across platforms, keeping your tracks competitive without harsh limiting. Dual-pass FFmpeg loudnorm locks in accurate integrated loudness while safe true peak headroom prevents clipping and encoder distortion. Batch fast, keep dynamics, and sound great everywhere.
 
 # 14 LUFS Audio Normalizer
 
