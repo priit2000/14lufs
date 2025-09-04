@@ -1,6 +1,6 @@
 # 14 LUFS Audio Normalizer
 
-A small Python tool that normalizes audio to -14 LUFS using FFmpeg's loudnorm (dual-pass). Ships with a simple GUI by default and a CLI mode for batch work.
+A small Python tool that normalizes audio to -14 LUFS using FFmpeg loudnorm (dual-pass). Ships with a simple GUI by default and a CLI mode for batch work.
 
 ## Features
 - Dual-pass loudnorm to target -14 LUFS, TP -1.5 dBTP, LRA 11.

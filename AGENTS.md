@@ -14,7 +14,7 @@
 
 ## Coding Style and Naming
 - Style: PEP 8, 4-space indentation, snake_case for functions and variables.
-- ASCII only: use plain ASCII characters. Never use typographic dashes, smart quotes, or ellipsis.
+- ASCII only: use plain ASCII characters. Do not use typographic dashes, smart quotes, or ellipsis. Avoid quotation marks in docs; prefer plain wording.
 - Types: use type hints for public functions and return values.
 - Docstrings: short summary plus arguments and returns for non-trivial functions.
 - Formatting and linting: Black (line length 88) and Ruff/Flake8 are recommended before PRs.
