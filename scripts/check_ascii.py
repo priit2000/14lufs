@@ -33,6 +33,8 @@ def main(argv: list[str]) -> int:
             files.append(r)
         else:
             for p in r.rglob('*'):
+                if ".git" in p.parts:
+                    continue
                 if p.is_file() and p.suffix.lower() in {'.py', '.md', '.txt', '.json', '.yml', '.yaml'}:
                     files.append(p)
     total_bad = 0
