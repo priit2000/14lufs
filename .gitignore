@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+coverage.xml
+
+# Virtual envs / local dev
+.venv/
+venv/
+env/
+.env
+
+# Editors/IDEs
+.idea/
+.vscode/
+.vs/
+
+# OS junk
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Build/dist
+build/
+dist/
+*.spec
+
+# Logs
+*.log
+
+# Archives/binaries
+*.zip
+*.7z
+*.tar
+*.gz
+*.bz2
+*.xz
+
+# Media (do not commit large audio/video)
+*.mp3
+*.wav
+*.flac
+*.aac
+*.m4a
+*.ogg
+*.opus
+*.wma
+*.aiff
+*.aif
+*.au
+*.amr
+*.caf
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.webm
+
+# Model files (if experimenting with rnnoise)
+*.rnnn
+
+# Temporary
+tmp/
+temp/
+.cache/
