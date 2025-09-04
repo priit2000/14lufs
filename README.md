@@ -1,4 +1,4 @@
-Hit the streaming sweet spot with -14 LUFS. This tool delivers clear, punchy masters that translate consistently across platforms, keeping your tracks competitive without harsh limiting. Dual-pass FFmpeg loudnorm locks in accurate integrated loudness while safe true peak headroom prevents clipping and encoder distortion. Batch fast, keep dynamics, and sound great everywhere.
+Aim for consistent streaming playback at -14 LUFS. This tool helps produce clear, balanced masters that translate across major platforms without unnecessary limiting. Dual-pass FFmpeg loudnorm sets accurate integrated loudness, and conservative true peak headroom reduces the risk of clipping or encoder artifacts. Batch processing and simple defaults aim to preserve dynamics while keeping the workflow quick.
 
 # 14 LUFS Audio Normalizer
 
