@@ -1,3 +1,7 @@
+Normalizes audio to -14 LUFS with FFmpeg loudnorm dual-pass for consistent streaming playback.
+Uses safe defaults with headroom (true peak -1.5 dBTP) and avoids overwriting by auto-suffixing outputs.
+Works via a simple GUI or CLI on Python 3.8+ with FFmpeg in PATH.
+
 # 14 LUFS Audio Normalizer
 
 A small Python tool that normalizes audio to -14 LUFS using FFmpeg loudnorm (dual-pass). Ships with a simple GUI by default and a CLI mode for batch work.
@@ -37,3 +41,10 @@ A small Python tool that normalizes audio to -14 LUFS using FFmpeg loudnorm (dua
 ## Notes
 - Progress bar percentage is based on media duration (ffprobe preferred). If duration cannot be determined, the GUI shows a spinner per file but the job still completes.
 - Large audio/media should not be committed; see `.gitignore`.
+
+## Why -14 LUFS
+- Streaming consistency: Most major streaming platforms normalize playback to about -14 LUFS integrated so tracks in a playlist feel similar in loudness. A file that is louder will be turned down; a file that is quieter will be turned up.
+- Headroom and quality: Leaving headroom around -1.0 to -1.5 dBTP helps avoid intersample clipping and encoder distortion. The default here uses TP -1.5 dBTP to be conservative.
+- Not a regulation: Broadcast standards like EBU R128 use -23 LUFS. The -14 LUFS target is a pragmatic reference for streaming, not a rule. You can change targets with `--I`, `--TP`, and `--LRA`.
+- Master for sound: Normalization will adjust playback level either way. Focus on what serves the music. If you master very loud, platforms will likely turn it down. If you master more dynamic, platforms will likely turn it up.
+- Platform variation: Services can change targets or behavior over time and may offer different modes. If you must match a specific service, check its current guidance and adjust the flags accordingly.
