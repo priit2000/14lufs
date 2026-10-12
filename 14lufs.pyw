@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
-# 14lufs.py
+# 14lufs.pyw
 #
 # Convert audio to -14 LUFS using FFmpeg's loudnorm (dual pass).
 # Requires: Python 3.8+, ffmpeg in PATH.
 #
 # Usage:
 #   GUI (default on Windows):
-#     python.exe .\14lufs.py
+#     python.exe .\14lufs.pyw
 #   CLI examples:
-#     python.exe .\14lufs.py --no-gui input.mp3
-#     python.exe .\14lufs.py --no-gui input.mp3 -o out.mp3
-#     python.exe .\14lufs.py --no-gui in1.mp3 in2.wav --bitrate 192k --channels stereo
+#     python.exe .\14lufs.pyw --no-gui input.mp3
+#     python.exe .\14lufs.pyw --no-gui input.mp3 -o out.mp3
+#     python.exe .\14lufs.pyw --no-gui in1.mp3 in2.wav --bitrate 192k --channels stereo
 #
 import argparse
 import json
@@ -251,7 +251,7 @@ def second_pass_normalize(infile: Path, outfile: Path, I: float, TP: float, LRA:
 def default_out_path(infile: Path, explicit_out: Optional[str]) -> Path:
     if explicit_out:
         return Path(explicit_out)
-    stem = infile.stem + "_-14LUFS"
+    stem = infile.stem + "-14LUFS"
     ext = infile.suffix or ".mp3"
     return infile.with_name(stem + ext)
 
@@ -409,7 +409,7 @@ def launch_gui():
         nonlocal last_dir
         if len(selected_files) != 1:
             return
-        init_name = f"{selected_files[0].stem}_-14LUFS{selected_files[0].suffix or '.mp3'}"
+        init_name = f"{selected_files[0].stem}-14LUFS{selected_files[0].suffix or '.mp3'}"
         outp = filedialog.asksaveasfilename(title="Select output file",
                                             initialfile=init_name,
                                             initialdir=str(last_dir),
